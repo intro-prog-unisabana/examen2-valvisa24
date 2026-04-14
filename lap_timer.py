@@ -47,8 +47,8 @@ def format_laps(timer):
     Retorna una representacion en cadena de los tiempos.
     Formato: [t1, t2, t3, ..., tn]
     """
-   
-
+    return str(timer["times"])
+    
 
 def fastest_lap(timer):
     """

@@ -8,8 +8,7 @@ import lap_timer
 def main():
      
      filename = input()
-    
-    # TODO: Abrir el archivo y leer el numero de vueltas n
+     f = open(filename, "r")
     
     # TODO: Crear el cronometro usando lap_timer.init(n)
     

@@ -7,6 +7,9 @@
 #   - 'total': tiempo acumulado de todas las vueltas (float)
 
 
+from operator import add
+
+
 def init(max_laps):
     """
     Crea y retorna un diccionario para almacenar hasta max_laps vueltas.
@@ -61,8 +64,15 @@ def fastest_multi_lap(timer, k):
     """
     Retorna el tiempo acumulado mas rapido de cualquier k vueltas consecutivas.
     """
-    # TODO: Implementar
-    pass
+    times = timer["times"]
+    min_sum = float("inf")
+    
+    for i in range(len(times) - k + 1):
+        current_sum = sum(times[i:i + k])
+        if current_sum < min_sum:
+            min_sum = current_sum
+
+    return min_sum
 
 
 def longest_decreasing_streak(timer):

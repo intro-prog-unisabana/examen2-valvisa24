@@ -56,8 +56,6 @@ def fastest_lap(timer):
     """
     return min(timer["times"])
 
-    return min(timer["times"])
-
 
 def fastest_multi_lap(timer, k):
     """

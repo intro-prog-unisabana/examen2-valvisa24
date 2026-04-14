@@ -4,10 +4,9 @@
 
 import lap_timer
 
-
 def main():
-     
-    filename = input()
+    
+    filename = input("Nombre del archivo: ")
     f = open(filename, "r")
     n = int(f.readline().strip())
     timer = lap_timer.init(n)
@@ -18,7 +17,6 @@ def main():
 
     f.close()
 
-   
     print(lap_timer.longest_decreasing_streak(timer))
 
 if __name__ == "__main__":

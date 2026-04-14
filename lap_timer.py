@@ -32,6 +32,7 @@ def count(timer):
     """
     Retorna el numero de vueltas agregadas.
     """
+    return len(timer["times"])
     
 
 def cumulative_time(timer):

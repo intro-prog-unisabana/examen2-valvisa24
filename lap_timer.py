@@ -80,10 +80,24 @@ def longest_decreasing_streak(timer):
     Retorna la longitud maxima de una secuencia de vueltas consecutivas
     donde los tiempos disminuyen estrictamente.
     """
-    # TODO: Implementar
-    pass
+    
+    times = timer["times"]
 
+    max_streak = 1
+    current_streak = 1
 
+    for i in range(1, len(times)):
+        if times[i] < times[i - 1]:
+            current_streak += 1
+        else:
+            current_streak = 1
+
+        if current_streak > max_streak:
+            max_streak = current_streak
+
+    return max_streak
+    
+    
 def main():
     # crear un cronometro para el record mundial de 100m de Usain Bolt,
     # dividiendo la carrera en 10 segmentos (o "vueltas")
